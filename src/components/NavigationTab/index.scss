@@ -1,4 +1,5 @@
 @import "../../styles/colors";
+@import "../../styles/breakpoint";
 
 .navTab {
   position: absolute;
@@ -9,6 +10,22 @@
   margin-right: 8px;
   border-radius: 4px;
   max-height: 220px;
+
+  @media (max-width: $desktopWidth) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    max-height: none;
+    width: 100%;
+    top: auto;
+    justify-content: space-between;
+    padding: 0px 12px;
+    box-sizing: border-box;
+    box-shadow: -10px 15px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    border-top: 1px solid $borderColor;
+  }
 
   &__item {
     border-bottom: 0.5px solid $borderColor;
@@ -22,6 +39,10 @@
         fill: $heading;
       }
       color: $heading;
+    }
+
+    @media (max-width: $desktopWidth) {
+      border-bottom: 0;
     }
   }
 

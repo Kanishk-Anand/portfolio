@@ -1,10 +1,16 @@
 @import "../../styles/colors";
-
+@import "../../styles/breakpoint";
 .badgeWrapper {
   display: flex;
   justify-content: space-between;
   width: 60%;
   margin: 12px 0px;
+
+  @media (max-width: $desktopWidth) {
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+  }
 
   &__text {
     background-color: transparentize($heading, 0.4);
