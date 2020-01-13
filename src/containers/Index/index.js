@@ -241,7 +241,7 @@ export default class Index extends Component {
               />
             </div>
             <div className="profileCard__profileImg">
-              <img src="/profile_image.jpg" loading="lazy" alt="" />
+              <img src="/portfolio/profile_image.jpg" loading="lazy" alt="" />
             </div>
             <div className="profileCard__infoWrapper">
               <div className="profileCard__infoWrapper--heading">
