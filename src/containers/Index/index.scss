@@ -16,6 +16,10 @@
   border-radius: 8px;
   display: flex;
   position: relative;
+  @media only screen and (max-width: 768px) {
+    margin: 0px;
+    flex-direction: column;
+  }
 }
 
 .profileCard {
@@ -26,6 +30,9 @@
   position: relative;
   z-index: 10;
   background-color: $bgSecondaryColor;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
   &__imgWrapper {
     height: 250px;
     position: relative;
@@ -71,6 +78,9 @@
     &--subheading {
       font-size: 20px;
       color: $heading;
+    }
+    @media only screen and (max-width: 768px) {
+      width: 100%;
     }
   }
   &__profileImg {

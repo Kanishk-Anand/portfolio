@@ -23,6 +23,9 @@
       }
       color: $heading;
     }
+    @media only screen and (max-width: 768px) {
+      border-bottom: 0px;
+    }
   }
 
   &__text {
@@ -35,5 +38,15 @@
       fill: $heading;
     }
     color: $heading;
+  }
+  @media only screen and (max-width: 768px) {
+    position: fixed;
+    left: auto;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    top: auto;
+    width: 100%;
+    border-top: 1px solid $borderColor;
   }
 }

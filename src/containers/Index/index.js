@@ -6,6 +6,7 @@ import InfoBadge from "../../components/InfoBadge";
 import ProgressBar from "../../components/ProgressBar";
 import WorkExCard from "../../components/WorkExCard";
 import NavigationTab from "../../components/NavigationTab";
+import { detectMobile } from "../../utils/helper";
 import "./index.scss";
 import Highlights from "../../components/Highlights";
 
@@ -17,7 +18,7 @@ const data = {
         topSection: {
           heading: "",
           text:
-            "Prolific, full stack web developer with a passion for metrics and beating former 'best-yets.' Delivered more than 25 projects meeting highest web development standards, with optimal performance benchmarks. Decreased rework by 22% and infrastructure costs by 50%. Consistently receive high user experience scores for all web development projects, including a 100/100 on Lighthouse Audit. Passionate about building world class web applications.",
+            "Prolific, full stack web developer with a passion for metrics and beating former 'best-yets.' Delivered more than 25 projects meeting highest web development standards, with optimal performance benchmarks. Consistently receive high user experience and performance scores for projects, including a 100/100 on Lighthouse Audit. Passionate about building world class web applications.",
         },
         bottomSection: {
           heading: "",
@@ -44,7 +45,7 @@ const data = {
               Component: InfoBadge,
               props: {
                 badgeText: "Current Role....",
-                badgeSubtext: "Web Developer",
+                badgeSubtext: "Senior Frontend Developer",
               },
             },
             {
@@ -232,6 +233,9 @@ export default class Index extends Component {
     if (tab) {
       this.setState({ selectedTab: tab });
     }
+    if (detectMobile()) {
+      window.scrollTo(0, 450);
+    }
   }
 
   render() {
@@ -259,7 +263,7 @@ export default class Index extends Component {
                 Kanishk Anand
               </div>
               <div className="profileCard__infoWrapper--subheading">
-                Web Developer
+                Senior Frontend Developer
               </div>
               <SocialLinks />
               <ProfileCardFooter />

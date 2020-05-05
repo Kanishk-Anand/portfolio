@@ -11,6 +11,13 @@
   letter-spacing: 1px;
   overflow-y: scroll;
   max-height: 500px;
+  @media only screen and (max-width: 768px) {
+    width: auto;
+    padding: 30px 16px 50px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
 
   &__header {
     color: $headingSecondary;

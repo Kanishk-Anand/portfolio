@@ -6,7 +6,18 @@ export default () => {
     <div className="highlights">
       <ul>
         <li>
-          {" "}
+          Responsible for performance of consumer facing website, developed a
+          date-management library to replace MomentJS.
+        </li>
+        <li>
+          Introduced Blue/Green deployment strategy and managed the
+          infrastructure migration.
+        </li>
+        <li>
+          Revamped the user session logic, reducing upto 60% of the
+          infrastructure cost.
+        </li>
+        <li>
           Designed and implemented OYO Microsite framework using{" "}
           <a href="https://medium.com/oyotech/react-decorators-5499e95a4cac">
             React Decorators.
