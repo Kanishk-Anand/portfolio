@@ -7,11 +7,11 @@ export default () => {
   return (
     <div className="footerWrapper">
       <a
-        href="/kanishk_anand_resume.pdf"
-        download="kanishkAnandResume.pdf"
+        href={`${process.env.PUBLIC_URL}/kanishk_anand_resume.pdf`}
+        download="Kanishk_Anand_Resume.pdf"
         className="footerWrapper__btn"
       >
-        Download CV
+        Download Resume
         <FontAwesomeIcon icon={faDownload} />
       </a>
     </div>

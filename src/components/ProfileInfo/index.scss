@@ -10,7 +10,7 @@
   text-align: left;
   letter-spacing: 1px;
   overflow-y: scroll;
-  max-height: 500px;
+  font-size: 1.1rem;
   @media only screen and (max-width: 768px) {
     width: auto;
     padding: 30px 16px 50px;
@@ -21,12 +21,11 @@
 
   &__header {
     color: $headingSecondary;
-    font-size: 20px;
     font-weight: 600;
     padding: 30px 0px;
     text-align: left;
     border-bottom: 0.5px solid $borderColor;
-
+    font-size: 1.3rem;
     &:first-child {
       padding: 0 0 30px;
     }
@@ -34,7 +33,6 @@
 
   &__text {
     padding-top: 12px;
-    font-size: 14px;
   }
 
   &__bottomSection {
