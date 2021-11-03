@@ -7,8 +7,11 @@ import {
   faMedium,
 } from "@fortawesome/free-brands-svg-icons";
 import "./index.scss";
+import { detectMobile } from "../../utils/helper";
 
-export default (props) => {
+const socialLinks = () => {
+  const isMobile = detectMobile();
+  const iconSize = isMobile ? "sm" : "lg";
   return (
     <div className="socialLinks">
       <a
@@ -19,7 +22,7 @@ export default (props) => {
         <FontAwesomeIcon
           icon={faLinkedin}
           className="socialLinks__icons"
-          size="1x"
+          size={iconSize}
         />
       </a>
       <a
@@ -30,7 +33,7 @@ export default (props) => {
         <FontAwesomeIcon
           icon={faGithub}
           className="socialLinks__icons"
-          size="1x"
+          size={iconSize}
         />
       </a>
       <a
@@ -41,7 +44,7 @@ export default (props) => {
         <FontAwesomeIcon
           icon={faStackOverflow}
           className="socialLinks__icons"
-          size="1x"
+          size={iconSize}
         />
       </a>
       <a
@@ -52,9 +55,11 @@ export default (props) => {
         <FontAwesomeIcon
           icon={faMedium}
           className="socialLinks__icons"
-          size="1x"
+          size={iconSize}
         />
       </a>
     </div>
   );
 };
+
+export default socialLinks;

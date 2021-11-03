@@ -5,6 +5,15 @@ export default () => {
   return (
     <div className="highlights">
       <ul>
+      <li>
+         Revamped and re-architectured the B2B Ad booking portal from AngularJS to latest tech stack, which led to 50% improvement in the Core Web Vitals for performance.
+      </li>
+      <li>
+        Part of the team for developing and maintaing component library reused within Ad Platforms ecosystem. 
+      </li>
+      <li>
+         Leads the Ad remdering logic on devices for Apple News and Apple Stocks app.
+        </li>
         <li>
           Responsible for performance of consumer facing website, developed a
           date-management library to replace MomentJS.

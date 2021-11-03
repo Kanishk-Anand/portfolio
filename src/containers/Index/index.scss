@@ -11,7 +11,7 @@
 
 .wrapper {
   margin: 12vh 8vw;
-  height: 100%;
+  height: 70vh;
   width: 100%;
   border-radius: 8px;
   display: flex;
@@ -19,6 +19,8 @@
   @media only screen and (max-width: 768px) {
     margin: 0px;
     flex-direction: column;
+    max-height: none;
+    height: 100%;
   }
 }
 
@@ -30,6 +32,7 @@
   position: relative;
   z-index: 10;
   background-color: $bgSecondaryColor;
+  justify-content: space-between;
   @media only screen and (max-width: 768px) {
     width: 100%;
   }
@@ -66,17 +69,16 @@
     }
   }
   &__infoWrapper {
-    padding-top: 20px;
     border-radius: 8px;
     margin-top: 75px;
     &--heading {
-      font-size: 34px;
+      font-size: 2.25rem;
       color: $headingSecondary;
       font-weight: 400;
       margin-bottom: 8px;
     }
     &--subheading {
-      font-size: 20px;
+      font-size: 1.5rem;
       color: $heading;
     }
     @media only screen and (max-width: 768px) {
