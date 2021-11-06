@@ -1,11 +1,31 @@
-@import "../../styles/colors";
+:root {
+  --bg: #fafffb;
+  --bgSecondary: #e0eeeb;
+  --bgShadow: 255,255,255;
+  --textPrimary: rgba(0, 0, 0, 0.65);
+  --headingSecondary: rgba(0, 0, 0, 0.75);
+  --border: rgba(0, 0, 0, 0.35);
+  --heading: #9e2a2b;
+  --bgBlock: rgba(158, 42, 43, 0.35);
+}
+
+.dark {
+  --bg: #26262d;
+  --bgSecondary: #31313a;
+  --bgShadow: 0, 0, 0;
+  --textPrimary: rgba(255, 255, 255, 0.55);
+  --headingSecondary: rgba(255, 255, 255, 0.85);
+  --border: rgba(255, 255, 255, 0.75);
+  --heading: #78cc6d;
+  --bgBlock: rgba(120, 204, 109, 0.35);
+}
 
 .container {
-  background-color: $bgColor;
+  background-color: var(--bg);
   min-height: 100vh;
   display: flex;
   overflow-x: hidden;
-  color: $textPrimary;
+  color: var(--textPrimary);
   text-align: center;
 }
 
@@ -31,13 +51,14 @@
   border-radius: 8px;
   position: relative;
   z-index: 10;
-  background-color: $bgSecondaryColor;
+  background-color: var(--bgSecondary);
   justify-content: space-between;
   @media only screen and (max-width: 768px) {
     width: 100%;
+    z-index: 0;
   }
   &__imgWrapper {
-    height: 250px;
+    height: 50%;
     position: relative;
     img {
       height: 100%;
@@ -47,25 +68,13 @@
       border-bottom-right-radius: 20%;
       width: 100%;
     }
-    &::after {
-      content: "";
-      width: 168px;
-      height: 15px;
-      transform: rotate(10deg);
-      position: absolute;
-      top: 96%;
-      left: 10px;
-      background: #31313a;
-    }
-    &::before {
-      content: "";
-      width: 168px;
-      height: 15px;
-      transform: rotate(-10deg);
-      position: absolute;
-      top: 96%;
-      right: 10px;
-      background: #31313a;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+      height: 220px;
+      img {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+      }
     }
   }
   &__infoWrapper {
@@ -73,13 +82,13 @@
     margin-top: 75px;
     &--heading {
       font-size: 2.25rem;
-      color: $headingSecondary;
+      color: var(--headingSecondary);
       font-weight: 400;
       margin-bottom: 8px;
     }
     &--subheading {
       font-size: 1.5rem;
-      color: $heading;
+      color: var(--heading);
     }
     @media only screen and (max-width: 768px) {
       width: 100%;
@@ -87,17 +96,20 @@
   }
   &__profileImg {
     position: absolute;
-    top: 175px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     img {
       height: 150px;
       width: 150px;
       border-radius: 50%;
     }
+    @media only screen and (max-width: 768px) {
+     top: 220px;
+    }
   }
   &::after {
-    background: #31313a;
+    background-color: var(--bgSecondary, inherit);
     opacity: 0.3;
     content: "";
     position: absolute;
@@ -115,7 +127,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 15px rgba(var(--bgShadow), 0.25);
     z-index: -1;
   }
 }

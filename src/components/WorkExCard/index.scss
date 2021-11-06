@@ -1,19 +1,24 @@
-@import "../../styles/colors";
-
 .workCard {
   padding-bottom: 8px;
   width: 90%;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
   &__role {
-    font-weight: 600;
-    color: $headingSecondary;
+    color: var(--headingSecondary);
     margin-bottom: 4px;
   }
+  &__company, &__role {
+    font-weight: 600;
+  }
   &__badge {
-    border: 1px solid $heading;
-    color: $heading;
+    border: 2px solid var(--heading);
+    color: var(--heading);
     background-color: transparent;
-    font-size: 12px;
+    font-size: 0.75rem;
     text-transform: uppercase;
+    font-weight: 600;
   }
   &__description {
     margin-top: 24px;
@@ -24,7 +29,7 @@
 
   &__divider {
     height: 1px;
-    background-color: $borderColor;
+    background-color: var(--border);
     margin: 12px 0px;
   }
 }

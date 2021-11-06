@@ -4,12 +4,12 @@
   ul {
     padding-left: 18px;
     li {
-      margin: 8px;
+      margin: 12px 8px;
       a {
-        color: $headingSecondary;
+        color: var(--headingSecondary);
         &:visited,
         &:active {
-          color: $headingSecondary;
+          color: var(--headingSecondary);
         }
       }
     }

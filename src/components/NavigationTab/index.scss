@@ -5,13 +5,13 @@
   width: 80px;
   left: -88px;
   top: 30%;
-  background-color: $bgSecondaryColor;
+  background-color: var(--bgSecondary);
   margin-right: 8px;
   border-radius: 4px;
   max-height: 220px;
 
   &__item {
-    border-bottom: 0.5px solid $borderColor;
+    border-bottom: 0.5px solid var(--border);
     padding: 8px;
     &:last-child {
       border-bottom: 0px;
@@ -19,9 +19,9 @@
     cursor: pointer;
     &:hover {
       svg {
-        fill: $heading;
+        fill: var(--heading);
       }
-      color: $heading;
+      color: var(--heading);
     }
     @media only screen and (max-width: 768px) {
       border-bottom: 0px;
@@ -35,9 +35,9 @@
 
   &__selected {
     svg {
-      fill: $heading;
+      fill: var(--heading);
     }
-    color: $heading;
+    color: var(--heading);
   }
   @media only screen and (max-width: 768px) {
     position: fixed;
@@ -47,6 +47,6 @@
     justify-content: space-around;
     top: auto;
     width: 100%;
-    border-top: 1px solid $borderColor;
+    border-top: 1px solid var(--border);
   }
 }

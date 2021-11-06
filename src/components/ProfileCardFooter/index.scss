@@ -6,9 +6,9 @@
   font-size: 1.2rem;
 
   &__btn {
-    color: $headingSecondary;
+    color: var(--headingSecondary);
     background: transparent;
-    border: 1px solid $textPrimary;
+    border: 1px solid var(--textPrimary);
     text-transform: uppercase;
     display: flex;
     flex-grow: 1;
@@ -23,11 +23,11 @@
       margin-left: 8px;
     }
     &:hover {
-      color: $heading;
-      border: 1px solid $heading;
+      color: var(--heading);
+      border: 1px solid var(--heading);
 
       svg {
-        fill: $heading;
+        fill: var(--heading);
       }
     }
   }

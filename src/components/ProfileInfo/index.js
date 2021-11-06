@@ -1,18 +1,19 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "./index.scss";
 
-export default props => {
+
+const ProfileInfo = (props, ref) => {
   const {
     data: { sections = [] }
   } = props;
   return (
-    <div className="infoWrapper">
+    <div className="infoWrapper" ref={ref}>
       {sections.length &&
         sections.map(section => {
           const TopSectionComponent =
             section.topSection && section.topSection.Component;
           return (
-            <>
+            <div key={section.heading}>
               {(section.heading && (
                 <div className="infoWrapper__header"> {section.heading} </div>
               )) ||
@@ -51,9 +52,11 @@ export default props => {
                     })}
                 </div>
               )}
-            </>
+            </div>
           );
         })}
     </div>
   );
 };
+
+export default forwardRef(ProfileInfo);

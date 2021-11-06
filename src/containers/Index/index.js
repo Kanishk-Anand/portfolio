@@ -1,8 +1,9 @@
-import React, {  useState } from "react";
+import React, {  useRef, useState } from "react";
 import SocialLinks from "../../components/SocialLinks";
 import ProfileCardFooter from "../../components/ProfileCardFooter";
 import ProfileInfo from "../../components/ProfileInfo";
 import NavigationTab from "../../components/NavigationTab";
+import ThemeToggle from '../../components/ThemeToggle';
 import { detectMobile } from "../../utils/helper";
 import { PORTFOLIO_DATA, PERSONAL_INFO } from "./constants";
 import "./index.scss";
@@ -15,14 +16,16 @@ export default function Index() {
       updateTab(tab);
     }
     if (detectMobile()) {
-      window.scrollTo(0, 450);
+      profileInfoRef.current?.scrollIntoView({behaviour: 'smooth'})
     }
   };
   
+  const profileInfoRef = useRef(null);
 
   return (
     <div className="container">
       <div className="wrapper">
+        <ThemeToggle />
         <NavigationTab currentActive={selectedTab} changeTab={changeTab} />
         <div className="profileCard">
           <div className="profileCard__imgWrapper">
@@ -46,7 +49,7 @@ export default function Index() {
           </div>
           <ProfileCardFooter />
         </div>
-        <ProfileInfo data={PORTFOLIO_DATA[selectedTab]} />
+        <ProfileInfo ref={profileInfoRef} data={PORTFOLIO_DATA[selectedTab]} />
       </div>
     </div>
   );
