@@ -6,15 +6,11 @@
   width: 100%;
   margin: 12px 0px;
 
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
-
   &__text {
-    background-color: transparentize($heading, 0.4);
+    background-color: var(--bgBlock);
     padding: 4px 12px;
     border-radius: 4px;
-    color: $headingSecondary;
+    color: var(--headingSecondary);
     @media only screen and (max-width: 768px) {
       padding: 4px;
     }

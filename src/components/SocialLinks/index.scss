@@ -1,17 +1,16 @@
-@import "../../styles/colors";
-
 .socialLinks {
   display: flex;
   margin-top: 16px;
   justify-content: center;
+  font-size: 1.3rem;
   &__icons {
     margin-right: 12px;
     path {
-      fill: $headingSecondary;
+      fill: var(--headingSecondary);
     }
     &:hover {
       path {
-        fill: $heading;
+        fill: var(--heading);
       }
     }
   }
